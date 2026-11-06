@@ -29,22 +29,19 @@ Banyak aplikasi streaming film dan anime di Play Store, sehingga pengguna sulit 
 
 ## Hasil
 
-_Akan diisi setelah analisis selesai._
+### Hasil Hyperparameter Terbaik
 
-| Text Representation | Algoritma | Hyperparameter | Metrik 1 | Metrik 2 | Metrik 3 | Metrik 4 |
-|---|---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| Treatment | Text Representation | Algoritma | Hyperparameter Terbaik | Accuracy | Precision (macro) | Recall (macro) | F1 (macro) |
+|---|---|---|---|---|---|---|---|
+| Tanpa SMOTE | TF-IDF | Logistic Regression | `C=10`, `solver=liblinear` | 0.603 | 0.394 | 0.362 | 0.358 |
+| Tanpa SMOTE | TF-IDF | Random Forest | `max_depth=None`, `n_estimators=300` | 0.608 | 0.312 | 0.330 | 0.295 |
+| Tanpa SMOTE | Word2Vec | Logistic Regression | `C=10`, `solver=lbfgs` | 0.653 | 0.462 | 0.355 | 0.317 |
+| Tanpa SMOTE | Word2Vec | Random Forest | `max_depth=None`, `n_estimators=300` | 0.658 | 0.371 | 0.358 | 0.322 |
+| SMOTE | TF-IDF | Logistic Regression | `C=0.1`, `solver=liblinear` | 0.497 | 0.392 | 0.381 | 0.377 |
+| SMOTE | TF-IDF | Random Forest | `max_depth=None`, `n_estimators=(isi)` | 0.618 | 0.518 | 0.423 | 0.442 |
+| SMOTE | Word2Vec | Logistic Regression | `C=10`, `solver=liblinear` | 0.503 | 0.414 | 0.415 | 0.393 |
+| SMOTE | Word2Vec | Random Forest | `max_depth=20`, `n_estimators=100` | 0.573 | 0.400 | 0.394 | 0.395 |
 
-## Struktur Repositori
-
-```
-├── data/
-│   └── reviews.csv
-├── notebooks/
-│   └── text_mining.ipynb
-├── README.md
-└── .gitignore
-```
 
 ## Cara Menjalankan
 
@@ -61,4 +58,4 @@ Python, pandas, scikit-learn, NLTK, Gensim, Matplotlib, google-play-scraper
 
 ## Catatan
 
-Dikerjakan sebagai bagian dari mata kuliah Text Mining (BINUS University). Penggunaan AI dalam proses pengerjaan dideklarasikan sesuai ketentuan mata kuliah.
+Dikerjakan sebagai bagian dari mata kuliah Text Mining (BINUS University).
